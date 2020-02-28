@@ -1,0 +1,11 @@
+"OK" = "OK";
+"DONE" = "Done";
+"HELLO_WORLD" = "Hello, World!";
+"CAL_XIRR" = "Cal XIRR";
+"RATE_FULL" = "Rate of return on investment";
+"RATE" = "Rate";
+"TIPS" = "Negative for investment, positive for return";
+"PICK_DATE" = "Tap to pick date";
+"AMOUNT" = "Amount";
+"PLEASE_PICK_DATE" = "Please pick a valid date.";
+"PLEASE_INPUT_AMOUNT" = "Please input a valid number.";

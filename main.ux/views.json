@@ -1,0 +1,447 @@
+{
+  "props" : {
+    "debugging" : false,
+    "clipsToSafeArea" : false,
+    "keys" : [
+
+    ],
+    "homeIndicatorHidden" : false,
+    "id" : "main",
+    "title" : "交易",
+    "navButtons" : [
+      {
+        "handler" : {
+          "$type" : "$event",
+          "$props" : {
+            "selector" : "add_btn_handler"
+          }
+        },
+        "symbol" : "plus"
+      }
+    ]
+  },
+  "views" : [
+    {
+      "props" : {
+        "$footer" : {
+          "props" : {
+            "id" : "<T>$FOOTER",
+            "height" : 120
+          },
+          "views" : [
+            {
+              "props" : {
+                "frame" : {
+                  "y" : 10,
+                  "x" : 10,
+                  "width" : 100,
+                  "height" : 36
+                },
+                "title" : " 计算 XIRR 按钮",
+                "tintColor" : {
+                  "$type" : "$color",
+                  "$props" : {
+                    "red" : 255,
+                    "alpha" : 1,
+                    "blue" : 255,
+                    "green" : 255
+                  }
+                },
+                "id" : "cal_xirr_button",
+                "symbol" : "function"
+              },
+              "constraints" : [
+                {
+                  "y" : {
+                    "safe-area" : true
+                  },
+                  "multiplier" : 1,
+                  "x" : {
+                    "id" : "cal_xirr_button",
+                    "attribute" : 1,
+                    "safe-area" : true
+                  },
+                  "constant" : 20
+                },
+                {
+                  "y" : {
+                    "safe-area" : true
+                  },
+                  "relation" : 0,
+                  "multiplier" : 1,
+                  "x" : {
+                    "id" : "cal_xirr_button",
+                    "attribute" : 2,
+                    "safe-area" : true
+                  },
+                  "constant" : -20
+                },
+                {
+                  "y" : {
+                    "safe-area" : true
+                  },
+                  "multiplier" : 1,
+                  "x" : {
+                    "id" : "cal_xirr_button",
+                    "attribute" : 8,
+                    "safe-area" : true
+                  },
+                  "constant" : 50
+                },
+                {
+                  "y" : {
+                    "safe-area" : true
+                  },
+                  "multiplier" : 1,
+                  "x" : {
+                    "id" : "cal_xirr_button",
+                    "attribute" : 3,
+                    "safe-area" : true
+                  },
+                  "constant" : 10
+                }
+              ],
+              "type" : "button",
+              "events" : {
+                "tapped" : {
+                  "$type" : "$event",
+                  "$props" : {
+                    "selector" : "cal_btn_tapped"
+                  }
+                }
+              }
+            },
+            {
+              "type" : "label",
+              "props" : {
+                "radius" : 6,
+                "frame" : {
+                  "y" : 138,
+                  "x" : 20,
+                  "width" : 100,
+                  "height" : 50
+                },
+                "id" : "rate",
+                "bgcolor" : {
+                  "$type" : "$color",
+                  "$props" : {
+                    "red" : 255,
+                    "alpha" : 1,
+                    "blue" : 255,
+                    "green" : 255
+                  }
+                },
+                "text" : "收益率标签",
+                "align" : 1,
+                "textColor" : {
+                  "$type" : "$color",
+                  "$props" : {
+                    "red" : 221,
+                    "alpha" : 1,
+                    "blue" : 221,
+                    "green" : 221
+                  }
+                }
+              },
+              "constraints" : [
+                {
+                  "y" : {
+                    "safe-area" : true
+                  },
+                  "relation" : 0,
+                  "multiplier" : 1,
+                  "x" : {
+                    "id" : "rate",
+                    "attribute" : 1,
+                    "safe-area" : true
+                  },
+                  "constant" : 20
+                },
+                {
+                  "y" : {
+                    "safe-area" : true
+                  },
+                  "relation" : 0,
+                  "multiplier" : 1,
+                  "x" : {
+                    "id" : "rate",
+                    "attribute" : 2,
+                    "safe-area" : true
+                  },
+                  "constant" : -20
+                },
+                {
+                  "y" : {
+                    "id" : "cal_xirr_button",
+                    "attribute" : 4,
+                    "safe-area" : true
+                  },
+                  "relation" : 0,
+                  "multiplier" : 1,
+                  "x" : {
+                    "id" : "rate",
+                    "attribute" : 3,
+                    "safe-area" : true
+                  },
+                  "constant" : 10
+                },
+                {
+                  "y" : {
+                    "safe-area" : true
+                  },
+                  "relation" : 0,
+                  "multiplier" : 1,
+                  "x" : {
+                    "id" : "rate",
+                    "attribute" : 8,
+                    "safe-area" : true
+                  },
+                  "constant" : 50
+                }
+              ]
+            }
+          ]
+        },
+        "template" : {
+          "props" : {
+            "id" : "<T>TEMPLATE",
+            "height" : 44
+          },
+          "views" : [
+            {
+              "type" : "label",
+              "props" : {
+                "frame" : {
+                  "y" : 0,
+                  "x" : 20,
+                  "width" : 150,
+                  "height" : 44
+                },
+                "id" : "date_text",
+                "bgcolor" : {
+                  "$type" : "$color",
+                  "$props" : {
+                    "red" : 0,
+                    "alpha" : 0,
+                    "blue" : 0,
+                    "green" : 0
+                  }
+                },
+                "menu" : [
+
+                ],
+                "text" : "2020\/08\/08",
+                "autoFontSize" : true,
+                "align" : 0
+              },
+              "constraints" : [
+                {
+                  "x" : {
+                    "id" : "date_text",
+                    "attribute" : 7
+                  },
+                  "multiplier" : 1,
+                  "constant" : 92
+                },
+                {
+                  "x" : {
+                    "id" : "date_text",
+                    "attribute" : 1
+                  },
+                  "multiplier" : 1,
+                  "constant" : 20
+                },
+                {
+                  "x" : {
+                    "id" : "date_text",
+                    "attribute" : 8
+                  },
+                  "multiplier" : 1,
+                  "constant" : 44
+                },
+                {
+                  "x" : {
+                    "id" : "date_text",
+                    "attribute" : 3
+                  },
+                  "multiplier" : 1,
+                  "constant" : 0
+                }
+              ]
+            },
+            {
+              "type" : "label",
+              "props" : {
+                "frame" : {
+                  "y" : 0,
+                  "x" : 233,
+                  "width" : 100,
+                  "height" : 50
+                },
+                "id" : "amount",
+                "bgcolor" : {
+                  "$type" : "$color",
+                  "$props" : {
+                    "red" : 0,
+                    "alpha" : 0,
+                    "blue" : 0,
+                    "green" : 0
+                  }
+                },
+                "menu" : [
+
+                ],
+                "text" : "-37.6",
+                "autoFontSize" : true,
+                "align" : 2
+              },
+              "constraints" : [
+                {
+                  "x" : {
+                    "id" : "amount",
+                    "attribute" : 7
+                  },
+                  "multiplier" : 1,
+                  "constant" : 180
+                },
+                {
+                  "x" : {
+                    "id" : "amount",
+                    "attribute" : 2
+                  },
+                  "multiplier" : 1,
+                  "constant" : -20
+                },
+                {
+                  "x" : {
+                    "id" : "amount",
+                    "attribute" : 8
+                  },
+                  "multiplier" : 1,
+                  "constant" : 44
+                },
+                {
+                  "x" : {
+                    "id" : "amount",
+                    "attribute" : 3
+                  },
+                  "multiplier" : 1,
+                  "constant" : 0
+                }
+              ]
+            }
+          ]
+        },
+        "actions" : [
+          {
+            "title" : "delete",
+            "color" : {
+              "$type" : "$color",
+              "$props" : {
+                "red" : 255,
+                "alpha" : 1,
+                "blue" : 48,
+                "green" : 59
+              }
+            },
+            "handler" : {
+              "$type" : "$event",
+              "$props" : {
+                "selector" : "delete_handler"
+              }
+            }
+          }
+        ],
+        "frame" : {
+          "y" : 206,
+          "x" : 28,
+          "width" : 320,
+          "height" : 240
+        },
+        "data" : [
+          {
+            "amount" : {
+              "text" : "-42.09"
+            },
+            "date_text" : {
+              "text" : "2017\/03\/01"
+            }
+          },
+          {
+            "amount" : {
+              "text" : "642.09"
+            },
+            "date_text" : {
+              "text" : "2010\/12\/23"
+            }
+          }
+        ],
+        "id" : "trans_list",
+        "bgcolor" : {
+          "$type" : "$color",
+          "$props" : {
+            "red" : 238,
+            "alpha" : 1,
+            "blue" : 241,
+            "green" : 241
+          }
+        },
+        "separatorHidden" : false,
+        "contentSize" : {
+          "width" : 375,
+          "height" : 208
+        },
+        "rowHeight" : 0
+      },
+      "constraints" : [
+        {
+          "x" : {
+            "id" : "trans_list",
+            "attribute" : 1
+          },
+          "multiplier" : 1,
+          "constant" : 0
+        },
+        {
+          "x" : {
+            "id" : "trans_list",
+            "attribute" : 2
+          },
+          "multiplier" : 1,
+          "constant" : 0
+        },
+        {
+          "x" : {
+            "id" : "trans_list",
+            "attribute" : 3
+          },
+          "multiplier" : 1,
+          "constant" : 0
+        },
+        {
+          "x" : {
+            "id" : "trans_list",
+            "attribute" : 4
+          },
+          "multiplier" : 1,
+          "constant" : 0
+        }
+      ],
+      "type" : "list",
+      "events" : {
+        "ready" : {
+          "$type" : "$event",
+          "$props" : {
+            "selector" : "list_ready"
+          }
+        },
+        "didSelect" : {
+          "$type" : "$event",
+          "$props" : {
+            "selector" : "list_row_didSelect"
+          }
+        }
+      }
+    }
+  ]
+}

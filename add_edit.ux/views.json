@@ -1,0 +1,340 @@
+{
+  "props" : {
+    "id" : "add_edit.ux",
+    "navButtons" : [
+      {
+        "title" : "完成",
+        "handler" : {
+          "$type" : "$event",
+          "$props" : {
+            "selector" : "done_handler"
+          }
+        }
+      }
+    ],
+    "title" : "添加\/编辑"
+  },
+  "views" : [
+    {
+      "props" : {
+        "keyboardDismissMode" : 1,
+        "frame" : {
+          "y" : 166,
+          "x" : 28,
+          "width" : 320,
+          "height" : 320
+        },
+        "doubleTapToZoom" : true,
+        "id" : "scroll[0]",
+        "bgcolor" : {
+          "$type" : "$color",
+          "$props" : {
+            "red" : 238,
+            "alpha" : 1,
+            "blue" : 241,
+            "green" : 241
+          }
+        },
+        "maxZoomScale" : 2
+      },
+      "constraints" : [
+        {
+          "x" : {
+            "id" : "scroll[0]",
+            "attribute" : 1
+          },
+          "multiplier" : 1,
+          "constant" : 0
+        },
+        {
+          "x" : {
+            "id" : "scroll[0]",
+            "attribute" : 2
+          },
+          "multiplier" : 1,
+          "constant" : 0
+        },
+        {
+          "x" : {
+            "id" : "scroll[0]",
+            "attribute" : 3
+          },
+          "multiplier" : 1,
+          "constant" : 0
+        },
+        {
+          "x" : {
+            "id" : "scroll[0]",
+            "attribute" : 4
+          },
+          "multiplier" : 1,
+          "constant" : 0
+        }
+      ],
+      "type" : "scroll",
+      "views" : [
+        {
+          "props" : {
+            "frame" : {
+              "y" : 142,
+              "x" : 110,
+              "width" : 100,
+              "height" : 36
+            },
+            "title" : "选择日期",
+            "tintColor" : {
+              "$type" : "$color",
+              "$props" : {
+                "red" : 255,
+                "alpha" : 1,
+                "blue" : 255,
+                "green" : 255
+              }
+            },
+            "id" : "date_picker"
+          },
+          "constraints" : [
+            {
+              "y" : {
+                "safe-area" : true
+              },
+              "relation" : 0,
+              "multiplier" : 1,
+              "x" : {
+                "id" : "date_picker",
+                "attribute" : 1,
+                "safe-area" : true
+              },
+              "constant" : 20
+            },
+            {
+              "y" : {
+                "safe-area" : true
+              },
+              "relation" : 0,
+              "multiplier" : 1,
+              "x" : {
+                "id" : "date_picker",
+                "attribute" : 2,
+                "safe-area" : true
+              },
+              "constant" : -20
+            },
+            {
+              "y" : {
+                "safe-area" : false
+              },
+              "relation" : 0,
+              "multiplier" : 1,
+              "x" : {
+                "id" : "date_picker",
+                "attribute" : 3,
+                "safe-area" : true
+              },
+              "constant" : 20
+            },
+            {
+              "y" : {
+                "safe-area" : false
+              },
+              "relation" : 0,
+              "multiplier" : 1,
+              "x" : {
+                "id" : "date_picker",
+                "attribute" : 8,
+                "safe-area" : true
+              },
+              "constant" : 50
+            }
+          ],
+          "type" : "button",
+          "events" : {
+            "tapped" : {
+              "$type" : "$event",
+              "$props" : {
+                "selector" : "picker_tapped"
+              }
+            }
+          }
+        },
+        {
+          "props" : {
+            "placeholder" : "金额",
+            "radius" : 5,
+            "frame" : {
+              "y" : 308,
+              "x" : 28,
+              "width" : 320,
+              "height" : 36
+            },
+            "id" : "amount_input",
+            "bgcolor" : {
+              "$type" : "$color",
+              "$props" : {
+                "red" : 255,
+                "alpha" : 1,
+                "blue" : 255,
+                "green" : 255
+              }
+            },
+            "$keyboardView" : {
+              "props" : {
+                "id" : "<T>$KEYBOARDVIEW",
+                "height" : 44
+              }
+            },
+            "type" : 2
+          },
+          "constraints" : [
+            {
+              "y" : {
+                "safe-area" : true
+              },
+              "relation" : 0,
+              "multiplier" : 1,
+              "x" : {
+                "id" : "amount_input",
+                "attribute" : 1,
+                "safe-area" : true
+              },
+              "constant" : 20
+            },
+            {
+              "y" : {
+                "safe-area" : true
+              },
+              "relation" : 0,
+              "multiplier" : 1,
+              "x" : {
+                "id" : "amount_input",
+                "attribute" : 2,
+                "safe-area" : true
+              },
+              "constant" : -20
+            },
+            {
+              "y" : {
+                "id" : "date_picker",
+                "attribute" : 4,
+                "safe-area" : true
+              },
+              "relation" : 0,
+              "multiplier" : 1,
+              "x" : {
+                "id" : "amount_input",
+                "attribute" : 3,
+                "safe-area" : true
+              },
+              "constant" : 20
+            },
+            {
+              "relation" : 0,
+              "multiplier" : 1,
+              "x" : {
+                "id" : "amount_input",
+                "attribute" : 8,
+                "safe-area" : true
+              },
+              "constant" : 50
+            }
+          ],
+          "type" : "input",
+          "events" : {
+            "returned" : {
+              "$type" : "$event",
+              "$props" : {
+                "selector" : "input_returned"
+              }
+            }
+          }
+        },
+        {
+          "type" : "label",
+          "props" : {
+            "align" : 1,
+            "frame" : {
+              "y" : 301,
+              "x" : 138,
+              "width" : 100,
+              "height" : 50
+            },
+            "id" : "tips",
+            "font" : {
+              "$type" : "$font",
+              "$props" : {
+                "name" : ".SFUI-Regular",
+                "size" : 12
+              }
+            },
+            "autoFontSize" : true,
+            "text" : "提示信息"
+          },
+          "constraints" : [
+            {
+              "y" : {
+                "safe-area" : true
+              },
+              "relation" : 0,
+              "multiplier" : 1,
+              "x" : {
+                "id" : "tips",
+                "attribute" : 1,
+                "safe-area" : true
+              },
+              "constant" : 40
+            },
+            {
+              "y" : {
+                "safe-area" : true
+              },
+              "relation" : 0,
+              "multiplier" : 1,
+              "x" : {
+                "id" : "tips",
+                "attribute" : 2,
+                "safe-area" : true
+              },
+              "constant" : -40
+            },
+            {
+              "y" : {
+                "id" : "amount_input",
+                "attribute" : 4,
+                "safe-area" : true
+              },
+              "relation" : 0,
+              "multiplier" : 1,
+              "x" : {
+                "id" : "tips",
+                "attribute" : 3,
+                "safe-area" : true
+              },
+              "constant" : 20
+            },
+            {
+              "relation" : 0,
+              "multiplier" : 1,
+              "x" : {
+                "id" : "tips",
+                "attribute" : 8,
+                "safe-area" : true
+              },
+              "constant" : 16
+            }
+          ]
+        }
+      ],
+      "events" : {
+        "ready" : {
+          "$type" : "$event",
+          "$props" : {
+            "selector" : "scroll_ready"
+          }
+        }
+      }
+    }
+  ],
+  "events" : {
+
+  }
+}

@@ -1,0 +1,11 @@
+"OK" = "好的";
+"DONE" = "完成";
+"HELLO_WORLD" = "你好，世界！";
+"CAL_XIRR" = "计算 XIRR";
+"RATE_FULL" = "收益率";
+"RATE" = "收益率";
+"TIPS" = "输入负数表示投资，正数表示收益";
+"PICK_DATE" = "点按选择日期";
+"AMOUNT" = "金额";
+"PLEASE_PICK_DATE" = "请选择一个有效的日期";
+"PLEASE_INPUT_AMOUNT" = "请输入一个有效的数字";
