@@ -34,7 +34,7 @@ exports.cal_btn_tapped = sender => {
   let trans = [];
   data.forEach(item => {
     trans.push({
-      amount: item.amount.text,
+      amount: parseFloat(item.amount.text),
       when: new Date(parseInt(item.time))
     });
   });

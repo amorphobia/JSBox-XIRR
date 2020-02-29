@@ -23,7 +23,7 @@ function get_list(is_short_date = false) {
       const data_item = {
         id: item.id,
         time: item.time,
-        amount: { text: item.amount },
+        amount: { text: `${item.amount}` },
         date_text: { text: date_text }
       };
       data.push(data_item);
