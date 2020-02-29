@@ -9,3 +9,12 @@
 "AMOUNT" = "金额";
 "PLEASE_PICK_DATE" = "请选择一个有效的日期";
 "PLEASE_INPUT_AMOUNT" = "请输入一个有效的数字";
+"TRANS" = "交易";
+"ADD" = "添加";
+"EDIT" = "编辑";
+"ERR" = "错误";
+"ERR_LEN" = "请添加更多交易";
+"ERR_SAME_DAY" = "交易不能全在同一天";
+"ERR_NONNEG" = "金额不能全为非负";
+"ERR_NEG" = "金额不能全为负";
+"ERR_CONV" = "算法收敛失败";

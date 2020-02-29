@@ -3,7 +3,8 @@
     "id" : "add_edit.ux",
     "navButtons" : [
       {
-        "title" : "完成",
+        "title" : "",
+        "icon" : "064",
         "handler" : {
           "$type" : "$event",
           "$props" : {
@@ -12,7 +13,7 @@
         }
       }
     ],
-    "title" : "添加\/编辑"
+    "title" : ""
   },
   "views" : [
     {

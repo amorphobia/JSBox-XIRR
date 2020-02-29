@@ -7,7 +7,7 @@ var DAYS_IN_YEAR = 365;
 
 function convert(data) {
   if (!data || !data.length || !data.forEach || data.length < 2) {
-    throw new Error("Argument is not an array with length of 2 or more.");
+    throw new Error("ERR_LEN");
   }
 
   var investments = [];
@@ -33,13 +33,13 @@ function convert(data) {
     });
   });
   if (start === end) {
-    throw new Error("Transactions must not all be on the same day.");
+    throw new Error("ERR_SAME_DAY");
   }
   if (!negative) {
-    throw new Error("Transactions must not all be nonnegative.");
+    throw new Error("ERR_NONNEG");
   }
   if (!nonnegative) {
-    throw new Error("Transactions must not all be negative.");
+    throw new Error("ERR_NEG");
   }
   investments.forEach(function(investment) {
     // Number of years (including fraction) this item applies
@@ -80,7 +80,7 @@ function xirr(transactions, options) {
   var rate = newton(presentValue, derivative, guess, options);
   if (rate === false) {
     // truthiness strikes again, !rate is true when rate is zero
-    throw new Error("Newton-Raphson algorithm failed to converge.");
+    throw new Error("ERR_CONV");
   }
   return rate;
 }

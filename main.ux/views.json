@@ -23,6 +23,46 @@
   "views" : [
     {
       "props" : {
+        "separatorHidden" : false,
+        "contentSize" : {
+          "width" : 375,
+          "height" : 208
+        },
+        "rowHeight" : 0,
+        "frame" : {
+          "y" : 206,
+          "x" : 28,
+          "width" : 320,
+          "height" : 240
+        },
+        "data" : [
+          {
+            "amount" : {
+              "text" : "-42.09"
+            },
+            "date_text" : {
+              "text" : "2017\/03\/01"
+            }
+          },
+          {
+            "amount" : {
+              "text" : "642.09"
+            },
+            "date_text" : {
+              "text" : "2010\/12\/23"
+            }
+          }
+        ],
+        "id" : "trans_list",
+        "bgcolor" : {
+          "$type" : "$color",
+          "$props" : {
+            "red" : 238,
+            "alpha" : 1,
+            "blue" : 241,
+            "green" : 241
+          }
+        },
         "$footer" : {
           "props" : {
             "id" : "<T>$FOOTER",
@@ -351,47 +391,7 @@
               }
             }
           }
-        ],
-        "frame" : {
-          "y" : 206,
-          "x" : 28,
-          "width" : 320,
-          "height" : 240
-        },
-        "data" : [
-          {
-            "amount" : {
-              "text" : "-42.09"
-            },
-            "date_text" : {
-              "text" : "2017\/03\/01"
-            }
-          },
-          {
-            "amount" : {
-              "text" : "642.09"
-            },
-            "date_text" : {
-              "text" : "2010\/12\/23"
-            }
-          }
-        ],
-        "id" : "trans_list",
-        "bgcolor" : {
-          "$type" : "$color",
-          "$props" : {
-            "red" : 238,
-            "alpha" : 1,
-            "blue" : 241,
-            "green" : 241
-          }
-        },
-        "separatorHidden" : false,
-        "contentSize" : {
-          "width" : 375,
-          "height" : 208
-        },
-        "rowHeight" : 0
+        ]
       },
       "constraints" : [
         {

@@ -11,6 +11,7 @@ exports.list_ready = sender => {
   update_list();
   $("cal_xirr_button").title = " " + $l10n("CAL_XIRR");
   $("rate").text = $l10n("RATE_FULL");
+  $ui.title = $l10n("TRANS");
 };
 
 exports.list_row_didSelect = (sender, indexPath, object) => {
@@ -37,7 +38,17 @@ exports.cal_btn_tapped = sender => {
       when: new Date(parseInt(item.time))
     });
   });
-  const rate = (xirr(trans) * 100).toFixed(4);
-  $("rate").textColor = $color("black");
-  $("rate").text = $l10n("RATE") + ": " + rate + "%";
+  let rate;
+  try {
+    rate = (xirr(trans) * 100).toFixed(4);
+  }
+  catch (err) {
+    $ui.error($l10n(err.message));
+    $("rate").textColor = $color("#DDDDDD");
+    $("rate").text = $l10n("RATE_FULL");
+  }
+  if (!isNaN(rate)) {
+    $("rate").textColor = $color("black");
+    $("rate").text = $l10n("RATE") + ": " + rate + "%";
+  }
 };

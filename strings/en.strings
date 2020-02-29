@@ -9,3 +9,12 @@
 "AMOUNT" = "Amount";
 "PLEASE_PICK_DATE" = "Please pick a valid date.";
 "PLEASE_INPUT_AMOUNT" = "Please input a valid number.";
+"TRANS" = "Transactions";
+"ADD" = "Add";
+"EDIT" = "Edit";
+"ERR" = "Error";
+"ERR_LEN" = "Please add more transactions";
+"ERR_SAME_DAY" = "Transactions must not all on same day";
+"ERR_NONNEG" = "Amounts must not all be nonnegative";
+"ERR_NEG" = "Amounts must not all be negative";
+"ERR_CONV" = "Algorithm failed to converge";

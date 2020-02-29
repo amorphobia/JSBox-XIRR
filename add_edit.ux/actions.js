@@ -50,9 +50,11 @@ exports.scroll_ready = sender => {
     $("date_picker").date = item.time;
     $("date_picker").title = date_text;
     $("amount_input").text = trans_amount;
+    $ui.title = $l10n("EDIT");
   } else {
     $("date_picker").title = $l10n("PICK_DATE");
     $("amount_input").placeholder = $l10n("AMOUNT");
+    $ui.title = $l10n("ADD");
   }
 };
 
