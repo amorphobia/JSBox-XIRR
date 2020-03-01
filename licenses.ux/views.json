@@ -1,0 +1,174 @@
+{
+  "props" : {
+    "id" : "licenses.ux",
+    "navButtons" : [
+      {
+        "handler" : {
+          "$type" : "$event",
+          "$props" : {
+            "selector" : "nav_btn_tapped"
+          }
+        },
+        "symbol" : "checkmark"
+      }
+    ],
+    "keys" : [
+
+    ]
+  },
+  "views" : [
+    {
+      "props" : {
+        "frame" : {
+          "y" : 206,
+          "x" : 28,
+          "width" : 320,
+          "height" : 240
+        },
+        "data" : [
+          "newton-raphson-method",
+          "nodejs-xirr"
+        ],
+        "id" : "license_list",
+        "bgcolor" : {
+          "$type" : "$color",
+          "$props" : {
+            "red" : 238,
+            "alpha" : 1,
+            "blue" : 241,
+            "green" : 241
+          }
+        },
+        "$header" : {
+          "props" : {
+            "id" : "<T>$HEADER",
+            "height" : 44
+          }
+        },
+        "scrollEnabled" : false,
+        "$footer" : {
+          "props" : {
+            "id" : "<T>$FOOTER",
+            "height" : 580
+          },
+          "views" : [
+            {
+              "type" : "markdown",
+              "props" : {
+                "frame" : {
+                  "y" : 10,
+                  "x" : 10,
+                  "width" : 320,
+                  "height" : 320
+                },
+                "content" : "# Readme",
+                "id" : "readme",
+                "bgcolor" : {
+                  "$type" : "$color",
+                  "$props" : {
+                    "red" : 221,
+                    "alpha" : 1,
+                    "blue" : 221,
+                    "green" : 221
+                  }
+                },
+                "alpha" : 1,
+                "opaque" : true
+              },
+              "constraints" : [
+                {
+                  "x" : {
+                    "id" : "readme",
+                    "attribute" : 1
+                  },
+                  "multiplier" : 1,
+                  "constant" : 0
+                },
+                {
+                  "x" : {
+                    "id" : "readme",
+                    "attribute" : 2
+                  },
+                  "multiplier" : 1,
+                  "constant" : 0
+                },
+                {
+                  "x" : {
+                    "id" : "readme",
+                    "attribute" : 3
+                  },
+                  "multiplier" : 1,
+                  "constant" : 10
+                },
+                {
+                  "x" : {
+                    "id" : "readme",
+                    "attribute" : 4
+                  },
+                  "multiplier" : 1,
+                  "constant" : 0
+                }
+              ]
+            }
+          ]
+        },
+        "alwaysBounceVertical" : false,
+        "template" : {
+          "props" : {
+            "id" : "<T>TEMPLATE",
+            "height" : 44
+          }
+        }
+      },
+      "constraints" : [
+        {
+          "x" : {
+            "id" : "license_list",
+            "attribute" : 1
+          },
+          "multiplier" : 1,
+          "constant" : 0
+        },
+        {
+          "x" : {
+            "id" : "license_list",
+            "attribute" : 2
+          },
+          "multiplier" : 1,
+          "constant" : 0
+        },
+        {
+          "x" : {
+            "id" : "license_list",
+            "attribute" : 3
+          },
+          "multiplier" : 1,
+          "constant" : 0
+        },
+        {
+          "x" : {
+            "id" : "license_list",
+            "attribute" : 4
+          },
+          "multiplier" : 1,
+          "constant" : 0
+        }
+      ],
+      "type" : "list",
+      "events" : {
+        "ready" : {
+          "$type" : "$event",
+          "$props" : {
+            "selector" : "licenses_ready"
+          }
+        },
+        "didSelect" : {
+          "$type" : "$event",
+          "$props" : {
+            "selector" : "select_license"
+          }
+        }
+      }
+    }
+  ]
+}

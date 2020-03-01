@@ -56,6 +56,16 @@ exports.scroll_ready = sender => {
     $("amount_input").placeholder = $l10n("AMOUNT");
     $ui.title = $l10n("ADD");
   }
+
+  if ($app.env != $env.keyboard) {
+    $("num_pad").hidden = true;
+  }
+  if ($app.env == $env.app) {
+    $("tips").updateLayout((make) => {
+      make.top.equalTo($("amount_input").bottom).offset(20);
+    });
+    $("tips").relayout();
+  }
 };
 
 exports.picker_tapped = sender => {
@@ -93,3 +103,57 @@ function picker_handler(date, picker, item) {
     comm.set_item_data(item);
   }
 }
+
+exports.num_pad_tapped = sender => {
+  $device.taptic(0);
+  const id = sender.id;
+  let t = $("amount_input").text;
+
+  switch (id) {
+    case "num0": // fallthrough
+    case "num1": // fallthrough
+    case "num2": // fallthrough
+    case "num3": // fallthrough
+    case "num4": // fallthrough
+    case "num5": // fallthrough
+    case "num6": // fallthrough
+    case "num7": // fallthrough
+    case "num8": // fallthrough
+    case "num9": {
+      if (t == "0" || t == "-0") {
+        t = t.substring(0, t.length - 1);
+      }
+      t += id.charAt(id.length - 1);
+      break;
+    }
+    case "dot": {
+      if (t.indexOf(".") == -1) {
+        t += ".";
+      }
+      break;
+    }
+    case "neg": {
+      if (t.indexOf("-") == -1) {
+        t = "-" + t;
+      } else {
+        t = t.substring(1);
+      }
+      break;
+    }
+    case "bak": {
+      if (t.length > 0) {
+        t = t.substring(0, t.length - 1);
+      }
+      break;
+    }
+    case "clr": {
+      t = "";
+      break;
+    }
+    default: {
+      $console.error("Unknown number pad tapped.");
+    }
+  }
+
+  $("amount_input").text = t;
+};

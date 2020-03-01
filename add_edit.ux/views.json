@@ -3,14 +3,13 @@
     "id" : "add_edit.ux",
     "navButtons" : [
       {
-        "title" : "",
-        "icon" : "064",
         "handler" : {
           "$type" : "$event",
           "$props" : {
             "selector" : "done_handler"
           }
-        }
+        },
+        "symbol" : "checkmark"
       }
     ],
     "title" : ""
@@ -18,7 +17,7 @@
   "views" : [
     {
       "props" : {
-        "keyboardDismissMode" : 1,
+        "maxZoomScale" : 2,
         "frame" : {
           "y" : 166,
           "x" : 28,
@@ -36,7 +35,7 @@
             "green" : 241
           }
         },
-        "maxZoomScale" : 2
+        "keyboardDismissMode" : 1
       },
       "constraints" : [
         {
@@ -132,7 +131,7 @@
                 "attribute" : 3,
                 "safe-area" : true
               },
-              "constant" : 20
+              "constant" : 10
             },
             {
               "y" : {
@@ -226,7 +225,7 @@
                 "attribute" : 3,
                 "safe-area" : true
               },
-              "constant" : 20
+              "constant" : 10
             },
             {
               "relation" : 0,
@@ -299,7 +298,7 @@
             },
             {
               "y" : {
-                "id" : "amount_input",
+                "id" : "num_pad",
                 "attribute" : 4,
                 "safe-area" : true
               },
@@ -310,7 +309,7 @@
                 "attribute" : 3,
                 "safe-area" : true
               },
-              "constant" : 20
+              "constant" : 10
             },
             {
               "relation" : 0,
@@ -321,6 +320,1650 @@
                 "safe-area" : true
               },
               "constant" : 16
+            }
+          ]
+        },
+        {
+          "props" : {
+            "frame" : {
+              "y" : 276,
+              "x" : 138,
+              "width" : 100,
+              "height" : 100
+            },
+            "id" : "num_pad",
+            "bgcolor" : {
+              "$type" : "$color",
+              "$props" : {
+                "red" : 255,
+                "alpha" : 1,
+                "blue" : 255,
+                "green" : 255
+              }
+            },
+            "radius" : 0
+          },
+          "constraints" : [
+            {
+              "y" : {
+                "safe-area" : true
+              },
+              "relation" : 0,
+              "multiplier" : 1,
+              "x" : {
+                "id" : "num_pad",
+                "attribute" : 1,
+                "safe-area" : true
+              },
+              "constant" : 20
+            },
+            {
+              "y" : {
+                "safe-area" : true
+              },
+              "relation" : 0,
+              "multiplier" : 1,
+              "x" : {
+                "id" : "num_pad",
+                "attribute" : 2,
+                "safe-area" : true
+              },
+              "constant" : -20
+            },
+            {
+              "y" : {
+                "id" : "amount_input",
+                "attribute" : 4
+              },
+              "relation" : 0,
+              "multiplier" : 1,
+              "x" : {
+                "id" : "num_pad",
+                "attribute" : 3
+              },
+              "constant" : 10
+            },
+            {
+              "y" : {
+                "id" : "num_pad",
+                "attribute" : 7
+              },
+              "relation" : 0,
+              "multiplier" : 0.28571428571428598,
+              "x" : {
+                "id" : "num_pad",
+                "attribute" : 8
+              },
+              "constant" : 0
+            }
+          ],
+          "type" : "view",
+          "views" : [
+            {
+              "props" : {
+                "radius" : 0,
+                "tintColor" : {
+                  "$type" : "$color",
+                  "$props" : {
+                    "red" : 255,
+                    "alpha" : 1,
+                    "blue" : 255,
+                    "green" : 255
+                  }
+                },
+                "frame" : {
+                  "y" : 30,
+                  "x" : 118,
+                  "width" : 100,
+                  "height" : 36
+                },
+                "bgcolor" : {
+                  "$type" : "$color",
+                  "$props" : {
+                    "red" : 255,
+                    "alpha" : 1,
+                    "blue" : 255,
+                    "green" : 255
+                  }
+                },
+                "title" : "0",
+                "id" : "num0",
+                "titleColor" : {
+                  "$type" : "$color",
+                  "$props" : {
+                    "red" : 0,
+                    "alpha" : 1,
+                    "blue" : 0,
+                    "green" : 0
+                  }
+                },
+                "borderWidth" : 1,
+                "font" : {
+                  "$type" : "$font",
+                  "$props" : {
+                    "name" : "AppleSDGothicNeo-UltraLight",
+                    "size" : 24
+                  }
+                }
+              },
+              "constraints" : [
+                {
+                  "y" : {
+                    "id" : "num_pad",
+                    "attribute" : 1,
+                    "safe-area" : true
+                  },
+                  "relation" : 0,
+                  "multiplier" : 1,
+                  "x" : {
+                    "id" : "num0",
+                    "attribute" : 1,
+                    "safe-area" : true
+                  },
+                  "constant" : 0
+                },
+                {
+                  "y" : {
+                    "id" : "num_pad",
+                    "attribute" : 3,
+                    "safe-area" : true
+                  },
+                  "relation" : 0,
+                  "multiplier" : 1,
+                  "x" : {
+                    "id" : "num0",
+                    "attribute" : 3,
+                    "safe-area" : true
+                  },
+                  "constant" : 0
+                },
+                {
+                  "y" : {
+                    "id" : "num_pad",
+                    "attribute" : 8
+                  },
+                  "relation" : 0,
+                  "multiplier" : 0.5,
+                  "x" : {
+                    "id" : "num0",
+                    "attribute" : 8
+                  },
+                  "constant" : 0
+                },
+                {
+                  "y" : {
+                    "id" : "num_pad",
+                    "attribute" : 8
+                  },
+                  "relation" : 0,
+                  "multiplier" : 0.5,
+                  "x" : {
+                    "id" : "num0",
+                    "attribute" : 7
+                  },
+                  "constant" : 0
+                }
+              ],
+              "type" : "button",
+              "events" : {
+                "tapped" : {
+                  "$type" : "$event",
+                  "$props" : {
+                    "selector" : "num_pad_tapped"
+                  }
+                }
+              }
+            },
+            {
+              "props" : {
+                "radius" : 0,
+                "tintColor" : {
+                  "$type" : "$color",
+                  "$props" : {
+                    "red" : 255,
+                    "alpha" : 1,
+                    "blue" : 255,
+                    "green" : 255
+                  }
+                },
+                "frame" : {
+                  "y" : 15,
+                  "x" : 15,
+                  "width" : 48,
+                  "height" : 48
+                },
+                "titleColor" : {
+                  "$type" : "$color",
+                  "$props" : {
+                    "red" : 0,
+                    "alpha" : 1,
+                    "blue" : 0,
+                    "green" : 0
+                  }
+                },
+                "title" : "1",
+                "bgcolor" : {
+                  "$type" : "$color",
+                  "$props" : {
+                    "red" : 255,
+                    "alpha" : 1,
+                    "blue" : 255,
+                    "green" : 255
+                  }
+                },
+                "id" : "num1",
+                "borderWidth" : 1,
+                "font" : {
+                  "$type" : "$font",
+                  "$props" : {
+                    "name" : "AppleSDGothicNeo-UltraLight",
+                    "size" : 24
+                  }
+                }
+              },
+              "constraints" : [
+                {
+                  "y" : {
+                    "id" : "num0",
+                    "attribute" : 2
+                  },
+                  "relation" : 0,
+                  "multiplier" : 1,
+                  "x" : {
+                    "id" : "num1",
+                    "attribute" : 1
+                  },
+                  "constant" : 0
+                },
+                {
+                  "y" : {
+                    "id" : "num0",
+                    "attribute" : 3,
+                    "safe-area" : false
+                  },
+                  "relation" : 0,
+                  "multiplier" : 1,
+                  "x" : {
+                    "id" : "num1",
+                    "attribute" : 3,
+                    "safe-area" : false
+                  },
+                  "constant" : 0
+                },
+                {
+                  "y" : {
+                    "id" : "num0",
+                    "attribute" : 8
+                  },
+                  "relation" : 0,
+                  "multiplier" : 1,
+                  "x" : {
+                    "id" : "num1",
+                    "attribute" : 8
+                  },
+                  "constant" : 0
+                },
+                {
+                  "y" : {
+                    "id" : "num0",
+                    "attribute" : 7
+                  },
+                  "relation" : 0,
+                  "multiplier" : 1,
+                  "x" : {
+                    "id" : "num1",
+                    "attribute" : 7
+                  },
+                  "constant" : 0
+                }
+              ],
+              "type" : "button",
+              "events" : {
+                "tapped" : {
+                  "$type" : "$event",
+                  "$props" : {
+                    "selector" : "num_pad_tapped"
+                  }
+                }
+              }
+            },
+            {
+              "props" : {
+                "radius" : 0,
+                "tintColor" : {
+                  "$type" : "$color",
+                  "$props" : {
+                    "red" : 255,
+                    "alpha" : 1,
+                    "blue" : 255,
+                    "green" : 255
+                  }
+                },
+                "id" : "num2",
+                "frame" : {
+                  "y" : 15,
+                  "x" : 63,
+                  "width" : 47.666666666666664,
+                  "height" : 48
+                },
+                "titleColor" : {
+                  "$type" : "$color",
+                  "$props" : {
+                    "red" : 0,
+                    "alpha" : 1,
+                    "blue" : 0,
+                    "green" : 0
+                  }
+                },
+                "title" : "2",
+                "bgcolor" : {
+                  "$type" : "$color",
+                  "$props" : {
+                    "red" : 255,
+                    "alpha" : 1,
+                    "blue" : 255,
+                    "green" : 255
+                  }
+                },
+                "borderWidth" : 1,
+                "font" : {
+                  "$type" : "$font",
+                  "$props" : {
+                    "name" : "AppleSDGothicNeo-UltraLight",
+                    "size" : 24
+                  }
+                }
+              },
+              "constraints" : [
+                {
+                  "y" : {
+                    "id" : "num1",
+                    "attribute" : 2
+                  },
+                  "relation" : 0,
+                  "multiplier" : 1,
+                  "x" : {
+                    "id" : "num2",
+                    "attribute" : 1
+                  },
+                  "constant" : 0
+                },
+                {
+                  "y" : {
+                    "id" : "num0",
+                    "attribute" : 3,
+                    "safe-area" : false
+                  },
+                  "relation" : 0,
+                  "multiplier" : 1,
+                  "x" : {
+                    "id" : "num2",
+                    "attribute" : 3,
+                    "safe-area" : false
+                  },
+                  "constant" : 0
+                },
+                {
+                  "y" : {
+                    "id" : "num0",
+                    "attribute" : 8
+                  },
+                  "relation" : 0,
+                  "multiplier" : 1,
+                  "x" : {
+                    "id" : "num2",
+                    "attribute" : 8
+                  },
+                  "constant" : 0
+                },
+                {
+                  "y" : {
+                    "id" : "num0",
+                    "attribute" : 7
+                  },
+                  "relation" : 0,
+                  "multiplier" : 1,
+                  "x" : {
+                    "id" : "num2",
+                    "attribute" : 7
+                  },
+                  "constant" : 0
+                }
+              ],
+              "type" : "button",
+              "events" : {
+                "tapped" : {
+                  "$type" : "$event",
+                  "$props" : {
+                    "selector" : "num_pad_tapped"
+                  }
+                }
+              }
+            },
+            {
+              "props" : {
+                "radius" : 0,
+                "tintColor" : {
+                  "$type" : "$color",
+                  "$props" : {
+                    "red" : 255,
+                    "alpha" : 1,
+                    "blue" : 255,
+                    "green" : 255
+                  }
+                },
+                "id" : "num3",
+                "bgcolor" : {
+                  "$type" : "$color",
+                  "$props" : {
+                    "red" : 255,
+                    "alpha" : 1,
+                    "blue" : 255,
+                    "green" : 255
+                  }
+                },
+                "frame" : {
+                  "y" : 15,
+                  "x" : 110.66666666666667,
+                  "width" : 48,
+                  "height" : 48
+                },
+                "titleColor" : {
+                  "$type" : "$color",
+                  "$props" : {
+                    "red" : 0,
+                    "alpha" : 1,
+                    "blue" : 0,
+                    "green" : 0
+                  }
+                },
+                "title" : "3",
+                "borderWidth" : 1,
+                "font" : {
+                  "$type" : "$font",
+                  "$props" : {
+                    "name" : "AppleSDGothicNeo-UltraLight",
+                    "size" : 24
+                  }
+                }
+              },
+              "constraints" : [
+                {
+                  "y" : {
+                    "id" : "num2",
+                    "attribute" : 2
+                  },
+                  "relation" : 0,
+                  "multiplier" : 1,
+                  "x" : {
+                    "id" : "num3",
+                    "attribute" : 1
+                  },
+                  "constant" : 0
+                },
+                {
+                  "y" : {
+                    "id" : "num0",
+                    "attribute" : 3,
+                    "safe-area" : false
+                  },
+                  "relation" : 0,
+                  "multiplier" : 1,
+                  "x" : {
+                    "id" : "num3",
+                    "attribute" : 3,
+                    "safe-area" : false
+                  },
+                  "constant" : 0
+                },
+                {
+                  "y" : {
+                    "id" : "num0",
+                    "attribute" : 8
+                  },
+                  "relation" : 0,
+                  "multiplier" : 1,
+                  "x" : {
+                    "id" : "num3",
+                    "attribute" : 8
+                  },
+                  "constant" : 0
+                },
+                {
+                  "y" : {
+                    "id" : "num0",
+                    "attribute" : 7
+                  },
+                  "relation" : 0,
+                  "multiplier" : 1,
+                  "x" : {
+                    "id" : "num3",
+                    "attribute" : 7
+                  },
+                  "constant" : 0
+                }
+              ],
+              "type" : "button",
+              "events" : {
+                "tapped" : {
+                  "$type" : "$event",
+                  "$props" : {
+                    "selector" : "num_pad_tapped"
+                  }
+                }
+              }
+            },
+            {
+              "props" : {
+                "radius" : 0,
+                "tintColor" : {
+                  "$type" : "$color",
+                  "$props" : {
+                    "red" : 255,
+                    "alpha" : 1,
+                    "blue" : 255,
+                    "green" : 255
+                  }
+                },
+                "id" : "num4",
+                "frame" : {
+                  "y" : 15,
+                  "x" : 158.66666666666666,
+                  "width" : 47.666666666666664,
+                  "height" : 48
+                },
+                "title" : "4",
+                "bgcolor" : {
+                  "$type" : "$color",
+                  "$props" : {
+                    "red" : 255,
+                    "alpha" : 1,
+                    "blue" : 255,
+                    "green" : 255
+                  }
+                },
+                "titleColor" : {
+                  "$type" : "$color",
+                  "$props" : {
+                    "red" : 0,
+                    "alpha" : 1,
+                    "blue" : 0,
+                    "green" : 0
+                  }
+                },
+                "borderWidth" : 1,
+                "font" : {
+                  "$type" : "$font",
+                  "$props" : {
+                    "name" : "AppleSDGothicNeo-UltraLight",
+                    "size" : 24
+                  }
+                }
+              },
+              "constraints" : [
+                {
+                  "y" : {
+                    "id" : "num3",
+                    "attribute" : 2
+                  },
+                  "relation" : 0,
+                  "multiplier" : 1,
+                  "x" : {
+                    "id" : "num4",
+                    "attribute" : 1
+                  },
+                  "constant" : 0
+                },
+                {
+                  "y" : {
+                    "id" : "num0",
+                    "attribute" : 3,
+                    "safe-area" : false
+                  },
+                  "relation" : 0,
+                  "multiplier" : 1,
+                  "x" : {
+                    "id" : "num4",
+                    "attribute" : 3,
+                    "safe-area" : false
+                  },
+                  "constant" : 0
+                },
+                {
+                  "y" : {
+                    "id" : "num0",
+                    "attribute" : 8
+                  },
+                  "relation" : 0,
+                  "multiplier" : 1,
+                  "x" : {
+                    "id" : "num4",
+                    "attribute" : 8
+                  },
+                  "constant" : 0
+                },
+                {
+                  "y" : {
+                    "id" : "num0",
+                    "attribute" : 7
+                  },
+                  "relation" : 0,
+                  "multiplier" : 1,
+                  "x" : {
+                    "id" : "num4",
+                    "attribute" : 7
+                  },
+                  "constant" : 0
+                }
+              ],
+              "type" : "button",
+              "events" : {
+                "tapped" : {
+                  "$type" : "$event",
+                  "$props" : {
+                    "selector" : "num_pad_tapped"
+                  }
+                }
+              }
+            },
+            {
+              "props" : {
+                "radius" : 0,
+                "tintColor" : {
+                  "$type" : "$color",
+                  "$props" : {
+                    "red" : 255,
+                    "alpha" : 1,
+                    "blue" : 255,
+                    "green" : 255
+                  }
+                },
+                "id" : "num5",
+                "titleColor" : {
+                  "$type" : "$color",
+                  "$props" : {
+                    "red" : 0,
+                    "alpha" : 1,
+                    "blue" : 0,
+                    "green" : 0
+                  }
+                },
+                "frame" : {
+                  "y" : 15,
+                  "x" : 206.33333333333334,
+                  "width" : 48,
+                  "height" : 48
+                },
+                "title" : "5",
+                "bgcolor" : {
+                  "$type" : "$color",
+                  "$props" : {
+                    "red" : 255,
+                    "alpha" : 1,
+                    "blue" : 255,
+                    "green" : 255
+                  }
+                },
+                "borderWidth" : 1,
+                "font" : {
+                  "$type" : "$font",
+                  "$props" : {
+                    "name" : "AppleSDGothicNeo-UltraLight",
+                    "size" : 24
+                  }
+                }
+              },
+              "constraints" : [
+                {
+                  "y" : {
+                    "id" : "num4",
+                    "attribute" : 2
+                  },
+                  "relation" : 0,
+                  "multiplier" : 1,
+                  "x" : {
+                    "id" : "num5",
+                    "attribute" : 1
+                  },
+                  "constant" : 0
+                },
+                {
+                  "y" : {
+                    "id" : "num0",
+                    "attribute" : 3
+                  },
+                  "relation" : 0,
+                  "multiplier" : 1,
+                  "x" : {
+                    "id" : "num5",
+                    "attribute" : 3
+                  },
+                  "constant" : 0
+                },
+                {
+                  "y" : {
+                    "id" : "num0",
+                    "attribute" : 8
+                  },
+                  "relation" : 0,
+                  "multiplier" : 1,
+                  "x" : {
+                    "id" : "num5",
+                    "attribute" : 8
+                  },
+                  "constant" : 0
+                },
+                {
+                  "y" : {
+                    "id" : "num0",
+                    "attribute" : 7
+                  },
+                  "relation" : 0,
+                  "multiplier" : 1,
+                  "x" : {
+                    "id" : "num5",
+                    "attribute" : 7
+                  },
+                  "constant" : 0
+                }
+              ],
+              "type" : "button",
+              "events" : {
+                "tapped" : {
+                  "$type" : "$event",
+                  "$props" : {
+                    "selector" : "num_pad_tapped"
+                  }
+                }
+              }
+            },
+            {
+              "props" : {
+                "radius" : 0,
+                "tintColor" : {
+                  "$type" : "$color",
+                  "$props" : {
+                    "red" : 255,
+                    "alpha" : 1,
+                    "blue" : 255,
+                    "green" : 255
+                  }
+                },
+                "id" : "num6",
+                "bgcolor" : {
+                  "$type" : "$color",
+                  "$props" : {
+                    "red" : 255,
+                    "alpha" : 1,
+                    "blue" : 255,
+                    "green" : 255
+                  }
+                },
+                "titleColor" : {
+                  "$type" : "$color",
+                  "$props" : {
+                    "red" : 0,
+                    "alpha" : 1,
+                    "blue" : 0,
+                    "green" : 0
+                  }
+                },
+                "frame" : {
+                  "y" : 15,
+                  "x" : 254.33333333333329,
+                  "width" : 47.666666666666664,
+                  "height" : 48
+                },
+                "title" : "6",
+                "borderWidth" : 1,
+                "font" : {
+                  "$type" : "$font",
+                  "$props" : {
+                    "name" : "AppleSDGothicNeo-UltraLight",
+                    "size" : 24
+                  }
+                }
+              },
+              "constraints" : [
+                {
+                  "y" : {
+                    "id" : "num5",
+                    "attribute" : 2
+                  },
+                  "relation" : 0,
+                  "multiplier" : 1,
+                  "x" : {
+                    "id" : "num6",
+                    "attribute" : 1
+                  },
+                  "constant" : 0
+                },
+                {
+                  "y" : {
+                    "id" : "num0",
+                    "attribute" : 3
+                  },
+                  "relation" : 0,
+                  "multiplier" : 1,
+                  "x" : {
+                    "id" : "num6",
+                    "attribute" : 3
+                  },
+                  "constant" : 0
+                },
+                {
+                  "y" : {
+                    "id" : "num0",
+                    "attribute" : 8
+                  },
+                  "relation" : 0,
+                  "multiplier" : 1,
+                  "x" : {
+                    "id" : "num6",
+                    "attribute" : 8
+                  },
+                  "constant" : 0
+                },
+                {
+                  "y" : {
+                    "id" : "num0",
+                    "attribute" : 7
+                  },
+                  "relation" : 0,
+                  "multiplier" : 1,
+                  "x" : {
+                    "id" : "num6",
+                    "attribute" : 7
+                  },
+                  "constant" : 0
+                }
+              ],
+              "type" : "button",
+              "events" : {
+                "tapped" : {
+                  "$type" : "$event",
+                  "$props" : {
+                    "selector" : "num_pad_tapped"
+                  }
+                }
+              }
+            },
+            {
+              "props" : {
+                "radius" : 0,
+                "tintColor" : {
+                  "$type" : "$color",
+                  "$props" : {
+                    "red" : 255,
+                    "alpha" : 1,
+                    "blue" : 255,
+                    "green" : 255
+                  }
+                },
+                "id" : "num7",
+                "titleColor" : {
+                  "$type" : "$color",
+                  "$props" : {
+                    "red" : 0,
+                    "alpha" : 1,
+                    "blue" : 0,
+                    "green" : 0
+                  }
+                },
+                "title" : "7",
+                "bgcolor" : {
+                  "$type" : "$color",
+                  "$props" : {
+                    "red" : 255,
+                    "alpha" : 1,
+                    "blue" : 255,
+                    "green" : 255
+                  }
+                },
+                "frame" : {
+                  "y" : 15,
+                  "x" : 302,
+                  "width" : 48,
+                  "height" : 48
+                },
+                "borderWidth" : 1,
+                "font" : {
+                  "$type" : "$font",
+                  "$props" : {
+                    "name" : "AppleSDGothicNeo-UltraLight",
+                    "size" : 24
+                  }
+                }
+              },
+              "constraints" : [
+                {
+                  "y" : {
+                    "id" : "num0",
+                    "attribute" : 1
+                  },
+                  "relation" : 0,
+                  "multiplier" : 1,
+                  "x" : {
+                    "id" : "num7",
+                    "attribute" : 1
+                  },
+                  "constant" : 0
+                },
+                {
+                  "y" : {
+                    "id" : "num0",
+                    "attribute" : 4
+                  },
+                  "relation" : 0,
+                  "multiplier" : 1,
+                  "x" : {
+                    "id" : "num7",
+                    "attribute" : 3
+                  },
+                  "constant" : 0
+                },
+                {
+                  "y" : {
+                    "id" : "num0",
+                    "attribute" : 8
+                  },
+                  "relation" : 0,
+                  "multiplier" : 1,
+                  "x" : {
+                    "id" : "num7",
+                    "attribute" : 8
+                  },
+                  "constant" : 0
+                },
+                {
+                  "y" : {
+                    "id" : "num0",
+                    "attribute" : 7
+                  },
+                  "relation" : 0,
+                  "multiplier" : 1,
+                  "x" : {
+                    "id" : "num7",
+                    "attribute" : 7
+                  },
+                  "constant" : 0
+                }
+              ],
+              "type" : "button",
+              "events" : {
+                "tapped" : {
+                  "$type" : "$event",
+                  "$props" : {
+                    "selector" : "num_pad_tapped"
+                  }
+                }
+              }
+            },
+            {
+              "props" : {
+                "radius" : 0,
+                "tintColor" : {
+                  "$type" : "$color",
+                  "$props" : {
+                    "red" : 255,
+                    "alpha" : 1,
+                    "blue" : 255,
+                    "green" : 255
+                  }
+                },
+                "frame" : {
+                  "y" : 63,
+                  "x" : 15,
+                  "width" : 48,
+                  "height" : 47.666666666666664
+                },
+                "id" : "num8",
+                "titleColor" : {
+                  "$type" : "$color",
+                  "$props" : {
+                    "red" : 0,
+                    "alpha" : 1,
+                    "blue" : 0,
+                    "green" : 0
+                  }
+                },
+                "title" : "8",
+                "bgcolor" : {
+                  "$type" : "$color",
+                  "$props" : {
+                    "red" : 255,
+                    "alpha" : 1,
+                    "blue" : 255,
+                    "green" : 255
+                  }
+                },
+                "borderWidth" : 1,
+                "font" : {
+                  "$type" : "$font",
+                  "$props" : {
+                    "name" : "AppleSDGothicNeo-UltraLight",
+                    "size" : 24
+                  }
+                }
+              },
+              "constraints" : [
+                {
+                  "y" : {
+                    "id" : "num1",
+                    "attribute" : 1
+                  },
+                  "relation" : 0,
+                  "multiplier" : 1,
+                  "x" : {
+                    "id" : "num8",
+                    "attribute" : 1
+                  },
+                  "constant" : 0
+                },
+                {
+                  "y" : {
+                    "id" : "num7",
+                    "attribute" : 4
+                  },
+                  "relation" : 0,
+                  "multiplier" : 1,
+                  "x" : {
+                    "id" : "num8",
+                    "attribute" : 4
+                  },
+                  "constant" : 0
+                },
+                {
+                  "y" : {
+                    "id" : "num0",
+                    "attribute" : 8
+                  },
+                  "relation" : 0,
+                  "multiplier" : 1,
+                  "x" : {
+                    "id" : "num8",
+                    "attribute" : 8
+                  },
+                  "constant" : 0
+                },
+                {
+                  "y" : {
+                    "id" : "num0",
+                    "attribute" : 7
+                  },
+                  "relation" : 0,
+                  "multiplier" : 1,
+                  "x" : {
+                    "id" : "num8",
+                    "attribute" : 7
+                  },
+                  "constant" : 0
+                }
+              ],
+              "type" : "button",
+              "events" : {
+                "tapped" : {
+                  "$type" : "$event",
+                  "$props" : {
+                    "selector" : "num_pad_tapped"
+                  }
+                }
+              }
+            },
+            {
+              "props" : {
+                "radius" : 0,
+                "tintColor" : {
+                  "$type" : "$color",
+                  "$props" : {
+                    "red" : 255,
+                    "alpha" : 1,
+                    "blue" : 255,
+                    "green" : 255
+                  }
+                },
+                "frame" : {
+                  "y" : 63,
+                  "x" : 63,
+                  "width" : 47.666666666666664,
+                  "height" : 47.666666666666664
+                },
+                "bgcolor" : {
+                  "$type" : "$color",
+                  "$props" : {
+                    "red" : 255,
+                    "alpha" : 1,
+                    "blue" : 255,
+                    "green" : 255
+                  }
+                },
+                "id" : "num9",
+                "titleColor" : {
+                  "$type" : "$color",
+                  "$props" : {
+                    "red" : 0,
+                    "alpha" : 1,
+                    "blue" : 0,
+                    "green" : 0
+                  }
+                },
+                "title" : "9",
+                "borderWidth" : 1,
+                "font" : {
+                  "$type" : "$font",
+                  "$props" : {
+                    "name" : "AppleSDGothicNeo-UltraLight",
+                    "size" : 24
+                  }
+                }
+              },
+              "constraints" : [
+                {
+                  "y" : {
+                    "id" : "num2",
+                    "attribute" : 1
+                  },
+                  "relation" : 0,
+                  "multiplier" : 1,
+                  "x" : {
+                    "id" : "num9",
+                    "attribute" : 1
+                  },
+                  "constant" : 0
+                },
+                {
+                  "y" : {
+                    "id" : "num7",
+                    "attribute" : 4
+                  },
+                  "relation" : 0,
+                  "multiplier" : 1,
+                  "x" : {
+                    "id" : "num9",
+                    "attribute" : 4
+                  },
+                  "constant" : 0
+                },
+                {
+                  "y" : {
+                    "id" : "num0",
+                    "attribute" : 8
+                  },
+                  "relation" : 0,
+                  "multiplier" : 1,
+                  "x" : {
+                    "id" : "num9",
+                    "attribute" : 8
+                  },
+                  "constant" : 0
+                },
+                {
+                  "y" : {
+                    "id" : "num0",
+                    "attribute" : 7
+                  },
+                  "relation" : 0,
+                  "multiplier" : 1,
+                  "x" : {
+                    "id" : "num9",
+                    "attribute" : 7
+                  },
+                  "constant" : 0
+                }
+              ],
+              "type" : "button",
+              "events" : {
+                "tapped" : {
+                  "$type" : "$event",
+                  "$props" : {
+                    "selector" : "num_pad_tapped"
+                  }
+                }
+              }
+            },
+            {
+              "props" : {
+                "radius" : 0,
+                "tintColor" : {
+                  "$type" : "$color",
+                  "$props" : {
+                    "red" : 255,
+                    "alpha" : 1,
+                    "blue" : 255,
+                    "green" : 255
+                  }
+                },
+                "frame" : {
+                  "y" : 63,
+                  "x" : 110.66666666666667,
+                  "width" : 48,
+                  "height" : 47.666666666666664
+                },
+                "id" : "dot",
+                "title" : ".",
+                "bgcolor" : {
+                  "$type" : "$color",
+                  "$props" : {
+                    "red" : 255,
+                    "alpha" : 1,
+                    "blue" : 255,
+                    "green" : 255
+                  }
+                },
+                "titleColor" : {
+                  "$type" : "$color",
+                  "$props" : {
+                    "red" : 0,
+                    "alpha" : 1,
+                    "blue" : 0,
+                    "green" : 0
+                  }
+                },
+                "borderWidth" : 1,
+                "font" : {
+                  "$type" : "$font",
+                  "$props" : {
+                    "name" : "AppleSDGothicNeo-UltraLight",
+                    "size" : 24
+                  }
+                }
+              },
+              "constraints" : [
+                {
+                  "y" : {
+                    "id" : "num3",
+                    "attribute" : 1
+                  },
+                  "relation" : 0,
+                  "multiplier" : 1,
+                  "x" : {
+                    "id" : "dot",
+                    "attribute" : 1
+                  },
+                  "constant" : 0
+                },
+                {
+                  "y" : {
+                    "id" : "num7",
+                    "attribute" : 4
+                  },
+                  "relation" : 0,
+                  "multiplier" : 1,
+                  "x" : {
+                    "id" : "dot",
+                    "attribute" : 4
+                  },
+                  "constant" : 0
+                },
+                {
+                  "y" : {
+                    "id" : "num0",
+                    "attribute" : 8
+                  },
+                  "relation" : 0,
+                  "multiplier" : 1,
+                  "x" : {
+                    "id" : "dot",
+                    "attribute" : 8
+                  },
+                  "constant" : 0
+                },
+                {
+                  "y" : {
+                    "id" : "num0",
+                    "attribute" : 7
+                  },
+                  "relation" : 0,
+                  "multiplier" : 1,
+                  "x" : {
+                    "id" : "dot",
+                    "attribute" : 7
+                  },
+                  "constant" : 0
+                }
+              ],
+              "type" : "button",
+              "events" : {
+                "tapped" : {
+                  "$type" : "$event",
+                  "$props" : {
+                    "selector" : "num_pad_tapped"
+                  }
+                }
+              }
+            },
+            {
+              "props" : {
+                "radius" : 0,
+                "tintColor" : {
+                  "$type" : "$color",
+                  "$props" : {
+                    "red" : 255,
+                    "alpha" : 1,
+                    "blue" : 255,
+                    "green" : 255
+                  }
+                },
+                "frame" : {
+                  "y" : 63,
+                  "x" : 158.66666666666666,
+                  "width" : 47.666666666666664,
+                  "height" : 47.666666666666664
+                },
+                "titleColor" : {
+                  "$type" : "$color",
+                  "$props" : {
+                    "red" : 0,
+                    "alpha" : 1,
+                    "blue" : 0,
+                    "green" : 0
+                  }
+                },
+                "id" : "neg",
+                "title" : "-",
+                "bgcolor" : {
+                  "$type" : "$color",
+                  "$props" : {
+                    "red" : 255,
+                    "alpha" : 1,
+                    "blue" : 255,
+                    "green" : 255
+                  }
+                },
+                "borderWidth" : 1,
+                "font" : {
+                  "$type" : "$font",
+                  "$props" : {
+                    "name" : "AppleSDGothicNeo-UltraLight",
+                    "size" : 24
+                  }
+                }
+              },
+              "constraints" : [
+                {
+                  "y" : {
+                    "id" : "num4",
+                    "attribute" : 1
+                  },
+                  "relation" : 0,
+                  "multiplier" : 1,
+                  "x" : {
+                    "id" : "neg",
+                    "attribute" : 1
+                  },
+                  "constant" : 0
+                },
+                {
+                  "y" : {
+                    "id" : "num7",
+                    "attribute" : 4
+                  },
+                  "relation" : 0,
+                  "multiplier" : 1,
+                  "x" : {
+                    "id" : "neg",
+                    "attribute" : 4
+                  },
+                  "constant" : 0
+                },
+                {
+                  "y" : {
+                    "id" : "num0",
+                    "attribute" : 8
+                  },
+                  "relation" : 0,
+                  "multiplier" : 1,
+                  "x" : {
+                    "id" : "neg",
+                    "attribute" : 8
+                  },
+                  "constant" : 0
+                },
+                {
+                  "y" : {
+                    "id" : "num0",
+                    "attribute" : 7
+                  },
+                  "relation" : 0,
+                  "multiplier" : 1,
+                  "x" : {
+                    "id" : "neg",
+                    "attribute" : 7
+                  },
+                  "constant" : 0
+                }
+              ],
+              "type" : "button",
+              "events" : {
+                "tapped" : {
+                  "$type" : "$event",
+                  "$props" : {
+                    "selector" : "num_pad_tapped"
+                  }
+                }
+              }
+            },
+            {
+              "props" : {
+                "radius" : 0,
+                "tintColor" : {
+                  "$type" : "$color",
+                  "$props" : {
+                    "red" : 255,
+                    "alpha" : 1,
+                    "blue" : 255,
+                    "green" : 255
+                  }
+                },
+                "frame" : {
+                  "y" : 63,
+                  "x" : 206.33333333333334,
+                  "width" : 48,
+                  "height" : 47.666666666666664
+                },
+                "bgcolor" : {
+                  "$type" : "$color",
+                  "$props" : {
+                    "red" : 255,
+                    "alpha" : 1,
+                    "blue" : 255,
+                    "green" : 255
+                  }
+                },
+                "titleColor" : {
+                  "$type" : "$color",
+                  "$props" : {
+                    "red" : 0,
+                    "alpha" : 1,
+                    "blue" : 0,
+                    "green" : 0
+                  }
+                },
+                "id" : "bak",
+                "title" : "←",
+                "borderWidth" : 1,
+                "font" : {
+                  "$type" : "$font",
+                  "$props" : {
+                    "name" : "AppleSDGothicNeo-UltraLight",
+                    "size" : 24
+                  }
+                }
+              },
+              "constraints" : [
+                {
+                  "y" : {
+                    "id" : "num5",
+                    "attribute" : 1
+                  },
+                  "relation" : 0,
+                  "multiplier" : 1,
+                  "x" : {
+                    "id" : "bak",
+                    "attribute" : 1
+                  },
+                  "constant" : 0
+                },
+                {
+                  "y" : {
+                    "id" : "num7",
+                    "attribute" : 4
+                  },
+                  "relation" : 0,
+                  "multiplier" : 1,
+                  "x" : {
+                    "id" : "bak",
+                    "attribute" : 4
+                  },
+                  "constant" : 0
+                },
+                {
+                  "y" : {
+                    "id" : "num0",
+                    "attribute" : 8
+                  },
+                  "relation" : 0,
+                  "multiplier" : 1,
+                  "x" : {
+                    "id" : "bak",
+                    "attribute" : 8
+                  },
+                  "constant" : 0
+                },
+                {
+                  "y" : {
+                    "id" : "num0",
+                    "attribute" : 7
+                  },
+                  "relation" : 0,
+                  "multiplier" : 1,
+                  "x" : {
+                    "id" : "bak",
+                    "attribute" : 7
+                  },
+                  "constant" : 0
+                }
+              ],
+              "type" : "button",
+              "events" : {
+                "tapped" : {
+                  "$type" : "$event",
+                  "$props" : {
+                    "selector" : "num_pad_tapped"
+                  }
+                }
+              }
+            },
+            {
+              "props" : {
+                "radius" : 0,
+                "tintColor" : {
+                  "$type" : "$color",
+                  "$props" : {
+                    "red" : 255,
+                    "alpha" : 1,
+                    "blue" : 255,
+                    "green" : 255
+                  }
+                },
+                "frame" : {
+                  "y" : 63,
+                  "x" : 254.33333333333329,
+                  "width" : 47.666666666666664,
+                  "height" : 47.666666666666664
+                },
+                "titleColor" : {
+                  "$type" : "$color",
+                  "$props" : {
+                    "red" : 0,
+                    "alpha" : 1,
+                    "blue" : 0,
+                    "green" : 0
+                  }
+                },
+                "title" : "C",
+                "bgcolor" : {
+                  "$type" : "$color",
+                  "$props" : {
+                    "red" : 255,
+                    "alpha" : 1,
+                    "blue" : 255,
+                    "green" : 255
+                  }
+                },
+                "id" : "clr",
+                "borderWidth" : 1,
+                "font" : {
+                  "$type" : "$font",
+                  "$props" : {
+                    "name" : "AppleSDGothicNeo-UltraLight",
+                    "size" : 24
+                  }
+                }
+              },
+              "constraints" : [
+                {
+                  "y" : {
+                    "id" : "num6",
+                    "attribute" : 1
+                  },
+                  "relation" : 0,
+                  "multiplier" : 1,
+                  "x" : {
+                    "id" : "clr",
+                    "attribute" : 1
+                  },
+                  "constant" : 0
+                },
+                {
+                  "y" : {
+                    "id" : "num7",
+                    "attribute" : 4
+                  },
+                  "relation" : 0,
+                  "multiplier" : 1,
+                  "x" : {
+                    "id" : "clr",
+                    "attribute" : 4
+                  },
+                  "constant" : 0
+                },
+                {
+                  "y" : {
+                    "id" : "num0",
+                    "attribute" : 8
+                  },
+                  "relation" : 0,
+                  "multiplier" : 1,
+                  "x" : {
+                    "id" : "clr",
+                    "attribute" : 8
+                  },
+                  "constant" : 0
+                },
+                {
+                  "y" : {
+                    "id" : "num0",
+                    "attribute" : 7
+                  },
+                  "relation" : 0,
+                  "multiplier" : 1,
+                  "x" : {
+                    "id" : "clr",
+                    "attribute" : 7
+                  },
+                  "constant" : 0
+                }
+              ],
+              "type" : "button",
+              "events" : {
+                "tapped" : {
+                  "$type" : "$event",
+                  "$props" : {
+                    "selector" : "num_pad_tapped"
+                  }
+                }
+              }
             }
           ]
         }

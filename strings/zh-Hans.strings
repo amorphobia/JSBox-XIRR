@@ -18,3 +18,4 @@
 "ERR_NONNEG" = "金额不能全为非负";
 "ERR_NEG" = "金额不能全为负";
 "ERR_CONV" = "算法收敛失败";
+"LICENSES" = "开源软件";

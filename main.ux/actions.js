@@ -41,8 +41,7 @@ exports.cal_btn_tapped = sender => {
   let rate;
   try {
     rate = (xirr(trans) * 100).toFixed(4);
-  }
-  catch (err) {
+  } catch (err) {
     $ui.error($l10n(err.message));
     $("rate").textColor = $color("#DDDDDD");
     $("rate").text = $l10n("RATE_FULL");
@@ -51,4 +50,8 @@ exports.cal_btn_tapped = sender => {
     $("rate").textColor = $color("black");
     $("rate").text = $l10n("RATE") + ": " + rate + "%";
   }
+};
+
+exports.info_btn_handler = () => {
+  $ui.push("licenses.ux");
 };

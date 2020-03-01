@@ -1,19 +1,19 @@
 {
   "settings" : {
-    "minOSVer" : "11.0.0",
-    "minSDKVer" : "1.55.0",
+    "minOSVer" : "13.3.1",
+    "minSDKVer" : "2.4.0",
     "idleTimerDisabled" : false,
     "autoKeyboardEnabled" : false,
     "keyboardToolbarEnabled" : false,
     "rotateDisabled" : false
   },
   "info" : {
-    "version" : "1.0.2",
+    "version" : "1.1.0",
     "author" : "amorphobia",
-    "types" : 15,
+    "types" : 9,
     "website" : "",
-    "name" : "jsbox-xirr",
-    "url" : "https://github.com/amorphobia/JSBox-XIRR"
+    "name" : "JSBox XIRR",
+    "url" : ""
   },
   "widget" : {
     "staticSize" : false,
