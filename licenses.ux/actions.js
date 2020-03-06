@@ -35,5 +35,9 @@ exports.select_license = (sender, indexPath, object) => {
 
 exports.licenses_ready = sender => {
   $ui.title = $l10n("LICENSES");
-  $("readme").content = $file.read("./README.md").string;
+  if ($app.env == $env.app) {
+    $("readme").content = $file.read("./README.md").string;
+  } else {
+    $("readme").hidden = true;
+  }
 };

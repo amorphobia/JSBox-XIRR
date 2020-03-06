@@ -12,7 +12,7 @@ module.exports = {
 function get_list(is_short_date = false) {
   let db = get_db();
   let data = [];
-  db.query("SELECT * FROM TransList", (rs, err) => {
+  db.query("SELECT * FROM TransList ORDER BY time", (rs, err) => {
     while (rs.next()) {
       const item = rs.values;
       const date = new Date(parseInt(item.time));
@@ -57,7 +57,7 @@ function delete_item(row) {
   let db = get_db();
   db.update({
     sql:
-      "DELETE FROM TransList WHERE id IN (SELECT id FROM TransList LIMIT 1 OFFSET ?)",
+      "DELETE FROM TransList WHERE id IN (SELECT id FROM TransList ORDER BY time LIMIT 1 OFFSET ?)",
     args: [row]
   });
   $sqlite.close(db);

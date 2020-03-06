@@ -57,11 +57,13 @@ exports.scroll_ready = sender => {
     $ui.title = $l10n("ADD");
   }
 
+  set_num_pad_color($color("tint"), $color("tint"));
+
   if ($app.env != $env.keyboard) {
     $("num_pad").hidden = true;
   }
   if ($app.env == $env.app) {
-    $("tips").updateLayout((make) => {
+    $("tips").updateLayout(make => {
       make.top.equalTo($("amount_input").bottom).offset(20);
     });
     $("tips").relayout();
@@ -79,7 +81,7 @@ exports.picker_tapped = sender => {
   selectedDate.setHours(0);
   selectedDate.setMinutes(0);
   selectedDate.setSeconds(0);
-  selectedDate.setMinutes(0);
+  selectedDate.setMilliseconds(0);
   $("amount_input").blur();
   $picker.date({
     props: {
@@ -157,3 +159,26 @@ exports.num_pad_tapped = sender => {
 
   $("amount_input").text = t;
 };
+
+function set_num_pad_color(titleColor, borderColor) {
+  const ids = [
+    "num0",
+    "num1",
+    "num2",
+    "num3",
+    "num4",
+    "num5",
+    "num6",
+    "num7",
+    "num8",
+    "num9",
+    "dot",
+    "neg",
+    "bak",
+    "clr"
+  ];
+  ids.forEach(id => {
+    $(id).titleColor = titleColor;
+    $(id).borderColor = borderColor;
+  });
+}

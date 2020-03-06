@@ -1,3 +1,5 @@
+> [Download link](https://xteko.com/redir?url=https://github.com/amorphobia/JSBox-XIRR/raw/master/.output/JSBox%20XIRR.box)
+
 # JSBox XIRR
 A [JSBox](https://apps.apple.com/app/id1312014438) package to calculate extended internal rate of return (XIRR).
 

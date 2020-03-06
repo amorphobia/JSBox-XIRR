@@ -19,13 +19,13 @@
         "symbol" : "plus"
       },
       {
-        "symbol" : "info",
         "handler" : {
           "$type" : "$event",
           "$props" : {
             "selector" : "info_btn_handler"
           }
-        }
+        },
+        "symbol" : "info"
       }
     ]
   },
