@@ -10,6 +10,16 @@
           }
         },
         "symbol" : "checkmark"
+      },
+      {
+        "title" : "",
+        "handler" : {
+          "$type" : "$event",
+          "$props" : {
+            "selector" : "toggle_keypad"
+          }
+        },
+        "symbol" : "keyboard"
       }
     ],
     "title" : ""
@@ -346,32 +356,6 @@
           "constraints" : [
             {
               "y" : {
-                "safe-area" : true
-              },
-              "relation" : 0,
-              "multiplier" : 1,
-              "x" : {
-                "id" : "num_pad",
-                "attribute" : 1,
-                "safe-area" : true
-              },
-              "constant" : 20
-            },
-            {
-              "y" : {
-                "safe-area" : true
-              },
-              "relation" : 0,
-              "multiplier" : 1,
-              "x" : {
-                "id" : "num_pad",
-                "attribute" : 2,
-                "safe-area" : true
-              },
-              "constant" : -20
-            },
-            {
-              "y" : {
                 "id" : "amount_input",
                 "attribute" : 4
               },
@@ -393,6 +377,28 @@
               "x" : {
                 "id" : "num_pad",
                 "attribute" : 8
+              },
+              "constant" : 0
+            },
+            {
+              "relation" : 0,
+              "multiplier" : 1,
+              "x" : {
+                "id" : "num_pad",
+                "attribute" : 7
+              },
+              "constant" : 335
+            },
+            {
+              "y" : {
+                "id" : "scroll[0]",
+                "attribute" : 9
+              },
+              "relation" : 0,
+              "multiplier" : 1,
+              "x" : {
+                "id" : "num_pad",
+                "attribute" : 9
               },
               "constant" : 0
             }

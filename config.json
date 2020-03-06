@@ -8,10 +8,10 @@
     "rotateDisabled" : false
   },
   "info" : {
-    "version" : "1.1.1",
+    "version" : "1.1.2",
     "author" : "amorphobia",
     "types" : 9,
-    "website" : "",
+    "website" : "https://github.com/amorphobia/JSBox-XIRR",
     "name" : "JSBox XIRR",
     "url" : ""
   },

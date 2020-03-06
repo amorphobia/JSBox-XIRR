@@ -60,13 +60,7 @@ exports.scroll_ready = sender => {
   set_num_pad_color($color("tint"), $color("tint"));
 
   if ($app.env != $env.keyboard) {
-    $("num_pad").hidden = true;
-  }
-  if ($app.env == $env.app) {
-    $("tips").updateLayout(make => {
-      make.top.equalTo($("amount_input").bottom).offset(20);
-    });
-    $("tips").relayout();
+    exports.toggle_keypad(undefined);
   }
 };
 
@@ -181,4 +175,68 @@ function set_num_pad_color(titleColor, borderColor) {
     $(id).titleColor = titleColor;
     $(id).borderColor = borderColor;
   });
+}
+
+exports.toggle_keypad = sender => {
+  const btn_tapped = sender != undefined;
+  if ($("num_pad").hidden == true) {
+    show_numpad(btn_tapped);
+  } else {
+    hide_numpad(btn_tapped);
+  }
+  if (btn_tapped) {
+    $device.taptic(0);
+  }
+};
+
+function hide_numpad(use_animate) {
+  $("tips").updateLayout(make => {
+    make.top.equalTo($("amount_input").bottom).offset(20);
+  });
+  $("num_pad").updateLayout(make => {
+    make.width.equalTo(0);
+  });
+  if (use_animate) {
+    $ui.animate({
+      duration: 0.2,
+      animation: () => {
+        $("num_pad").alpha = 0;
+        $("num_pad").relayout();
+        $("tips").relayout();
+      },
+      completion: () => {
+        $("num_pad").hidden = true;
+      }
+    });
+  } else {
+    $("tips").relayout();
+    $("num_pad").alpha = 0;
+    $("num_pad").relayout();
+    $("num_pad").hidden = true;
+  }
+}
+
+function show_numpad(use_animate) {
+  $("tips").updateLayout(make => {
+    make.top.equalTo($("amount_input").bottom).offset(116);
+  });
+  $("num_pad").updateLayout(make => {
+    make.width.equalTo(335);
+  });
+  $("num_pad").hidden = false;
+  if (use_animate) {
+    $ui.animate({
+      duration: 0.2,
+      animation: () => {
+        $("num_pad").alpha = 1;
+        $("num_pad").relayout();
+        $("tips").relayout();
+      }
+    });
+  } else {
+    $("tips").relayout();
+    $("num_pad").hidden = false;
+    $("num_pad").alpha = 1;
+    $("num_pad").relayout();
+  }
 }
